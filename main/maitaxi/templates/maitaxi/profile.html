@@ -1,0 +1,10 @@
+{% extends 'maitaxi/base.html' %}
+
+{% block content %}
+<h2>{{title}}</h2>
+<hr>
+<h2>Информация о пользователе:</h2>
+<p><b>Логин:</b> {{user.username}}</p>
+<p><b>Почта:</b> {{user.email}}</p>
+<b><a href="{% url 'logout' %}">Выход</a></b>
+{% endblock %}

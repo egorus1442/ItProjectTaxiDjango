@@ -1,0 +1,18 @@
+{% extends 'maitaxi/base.html' %}
+
+{% block content %}
+<h2>{{title}}</h2>
+<hr>
+{% for order in orders %}
+    <p><b>Откуда:</b>{{order.departure_point}}</p>
+    <p><b>Куда:</b>{{order.arrival_point}}</p>
+    <p><b>Водитель:</b></p>
+    <p>{{order.driver.name}} {{order.driver.surname}}</p>
+    <p><b>Стаж вождения:</b> {{order.driver.experience}} лет, <b>Рейтинг:</b> {{order.driver.rating}} звезд</p>
+    <p><b>Машина:</b></p>
+    <p><b>Модель:</b> {{order.driver.model_car}}, <b>Номер:</b>{{order.driver.car_id}}</p>
+    <p><b>Стоимость:</b> {{order.price}} MAIcoins</p>
+    <p><b>Дата заказа:</b> {{order.order_time}}</p>
+    <hr>
+{%endfor%}
+{% endblock %}

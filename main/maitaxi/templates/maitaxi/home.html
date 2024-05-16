@@ -1,0 +1,12 @@
+{% extends 'maitaxi/base.html' %}
+{% block content %}
+<li>{{user.username}}</li>
+<h2>{{title}}</h2>
+<hr>
+<h3>Заказать такси:</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Заказать</button>
+</form>
+{% endblock %}

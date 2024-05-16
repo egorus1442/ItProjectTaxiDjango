@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        <h1><b>MAItaxi</b></h1>
+        {% block mainmenu %}
+        <ul>
+            {% for i in menu %}
+            <li><a href="{% url i.url_name %}"> {{i.title}}</a></li>
+            {%endfor%}
+        </ul>
+        {% endblock mainmenu %}
+     </header>
+
+    {% block content%}
+    {% endblock content %}
+
+    <footer>
+        <hr>
+        <h2>DreamTeam</h2>
+    </footer>
+</body>
+</html>
