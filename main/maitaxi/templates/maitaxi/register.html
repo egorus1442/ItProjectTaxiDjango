@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,19 @@
      <a href="{% url 'login_and_register' %}">Назад</a>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+
+        <p><label for="{{ form.username.id_for_label }}">{{form.username.label}}: </label>{{ form.username}}</p>
+        <div>{{ form.username.errors }}</div>
+
+        <p><label for="{{ form.email.id_for_label }}">{{form.email.label}}: </label>{{ form.email}}</p>
+        <div>{{ form.email.errors }}</div>
+
+        <p><label for="{{ form.password1.id_for_label }}">{{form.password1.label}}: </label>{{ form.password1}}</p>
+        <div>{{ form.password1.errors }}</div>
+
+        <p><label for="{{ form.password2.id_for_label }}">{{form.password2.label}}: </label>{{ form.password2}}</p>
+        <div>{{ form.password2.errors }}</div>
+
         <button type="submit">Регистрация</button>
     </form>
 </body>
