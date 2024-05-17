@@ -22,7 +22,3 @@ class Trip(models.Model):
     order_time = models.DateTimeField(auto_now=True)
     price = models.DecimalField(max_digits=7, decimal_places=2)
     passenger = models.ForeignKey(User, on_delete=models.CASCADE)
-
-
-
-

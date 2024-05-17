@@ -36,7 +36,8 @@ class Migration(migrations.Migration):
                 ('order_time', models.DateTimeField(auto_now=True)),
                 ('price', models.DecimalField(decimal_places=2, max_digits=7)),
                 ('driver', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='maitaxi.driver')),
-                ('passenger', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('passenger', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                                to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
