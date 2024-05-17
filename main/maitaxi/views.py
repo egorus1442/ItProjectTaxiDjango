@@ -1,10 +1,7 @@
 from django.contrib.auth import logout
 from django.contrib.auth.views import LoginView
-from django.shortcuts import render
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.views.generic import CreateView
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .forms import *
 from .models import *
@@ -19,12 +16,12 @@ menu = [{'title': 'Главная', 'url_name': 'home'},
 
 def login_and_register(request):
     context = {'title': 'Вход и регистрация'}
-    return render(request, 'maitaxi/login_and_register.html', context=context)
+    return render(request=request, template_name='maitaxi/login_and_register.html', context=context)
 
 
 def logout_user(request):
-    logout(request)
-    return redirect('login_and_register')
+    logout(request=request)
+    return redirect(to='login_and_register')
 
 
 class RegisterUser(CreateView):
@@ -41,7 +38,7 @@ class LoginUser(LoginView):
         return reverse_lazy('home')
 
 
-#def home(request):
+# def home(request):
 #    context = {'title': 'Главная', 'menu': menu}
 #    return render(request, 'maitaxi/home.html', context=context)
 
@@ -49,7 +46,7 @@ class LoginUser(LoginView):
 def home(request):
 
     if request.method == 'POST':
-        form = Trip_Form(request.POST)
+        form = TripForm(request.POST)
         if form.is_valid():
             taxi_order = form.save(commit=False)
             taxi_order.passenger = request.user  # Привязываем заказ к текущему пользователю
@@ -58,9 +55,8 @@ def home(request):
             taxi_order.save()
             return redirect('info_order')  # Перенаправляем пользователя на страницу успеха
     else:
-        form = Trip_Form()
+        form = TripForm()
     return render(request, 'maitaxi/home.html', {'title': 'Главная - заказ такси', 'form': form, 'menu': menu})
-
 
 
 def about(request):
@@ -87,4 +83,3 @@ def history_trips(request):
                'menu': menu,
                'orders': orders}
     return render(request, 'maitaxi/history_trips.html', context=context)
-
