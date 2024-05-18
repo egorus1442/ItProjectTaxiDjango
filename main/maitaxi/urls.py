@@ -10,6 +10,5 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('history_trips/', history_trips, name='history_trips'),
     path('profile/', profile, name='profile'),
-    path('infoorder/', info_order, name='info_order'),
-
+    path('info_order/', info_order, name='info_order'),
 ]
