@@ -1,10 +1,11 @@
-{% extends 'maitaxi/base.html' %}
+{% extends 'maitaxi/base.html'
+
 {% load static %}
 {% block content %}
-<h2>{{title}}</h2>
+<h2>{{ title }}</h2>
 <hr>
 <h2>Информация о пользователе:</h2>
-<p><b>Логин:</b> {{user.username}}</p>
-<p><b>Почта:</b> {{user.email}}</p>
+<p><b>Логин:</b> {{ user.username }}</p>
+<p><b>Почта:</b> {{ user.email }}</p>
 <b><a href="{% url 'logout' %}">Выход</a></b>
 {% endblock %}
