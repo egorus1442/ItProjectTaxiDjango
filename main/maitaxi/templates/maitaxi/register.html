@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Регистрация</title>
+<link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/register.css' %}">
+<meta charset="UTF-8">
+<title>Регистрация</title>
 </head>
 <body>
     <h1>Регистрация</h1>
-     <a href="{% url 'login_and_register' %}">Назад</a>
     <form method="post">
         {% csrf_token %}
 
@@ -24,6 +24,8 @@
         <div>{{ form.password2.errors }}</div>
 
         <button type="submit">Регистрация</button>
+        <a href="{% url 'login_and_register' %}">Назад</a>
     </form>
+        
 </body>
 </html>
