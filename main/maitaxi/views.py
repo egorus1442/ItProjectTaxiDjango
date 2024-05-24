@@ -80,3 +80,11 @@ def history_trips(request):
                   context={'title': 'История поездок',
                            'menu': menu,
                            'orders': orders})
+
+
+def e_handler404(request, exception):
+    return render(request=request, template_name='maitaxi/404.html', context={}, status=404)
+
+
+def e_handler500(request):
+    return render(request=request, template_name='maitaxi/500.html', context={}, status=500)
