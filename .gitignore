@@ -217,3 +217,15 @@ fabric.properties
 # modules.xml
 Desktop
 Desktop.pub
+
+# Python related
+*.pyc
+*.pyo
+*.pyd
+
+# Django related
+/staticfiles/
+
+# OS related
+.DS_Store
+*.swp
