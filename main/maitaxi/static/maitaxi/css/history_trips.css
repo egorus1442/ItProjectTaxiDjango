@@ -3,12 +3,22 @@
     padding: 0;
 }
 
+body {
+    text-align: left;
+    height: 2000px;
+    width: 500px;
+}
+
+footer {
+    filter: opacity(0);
+}
+
 footer h2 {
     font-size: 2.5em;
 }
 
 .history {
-    text-align: left;
+    /* text-align: left; */
     font-family: 'Roboto', sans-serif;
 }
 
