@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/register.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<title>Регистрация</title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <p><label for="{{ form.username.id_for_label }}">{{form.username.label}}: </label>{{ form.username}}</p>
+        <div>{{ form.username.errors }}</div>
+
+        <p><label for="{{ form.email.id_for_label }}">{{form.email.label}}: </label>{{ form.email}}</p>
+        <div>{{ form.email.errors }}</div>
+
+        <p><label for="{{ form.password1.id_for_label }}">{{form.password1.label}}: </label>{{ form.password1}}</p>
+        <div>{{ form.password1.errors }}</div>
+
+        <p><label for="{{ form.password2.id_for_label }}">{{form.password2.label}}: </label>{{ form.password2}}</p>
+        <div>{{ form.password2.errors }}</div>
+
+        <button type="submit" class="rega">Регистрация</button>
+        <a href="{% url 'login_and_register' %}" class="rega">Назад</a>
+    </form>
+        
+</body>
+</html>

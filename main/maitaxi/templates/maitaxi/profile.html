@@ -1,0 +1,21 @@
+{% extends 'maitaxi/base.html'%}
+
+{% load static %}
+{% block content %}
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/profile.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<h2>{{title}}</h2>
+<hr>
+<div class="profile">
+    <h3>Информация о пользователе:</h3>
+    <p class="log"><b>Логин:</b> {{user.username}}</p>
+    <p class="poch"><b>Почта:</b> {{user.email}}</p>
+    <b><a class="profile_a" href="{% url 'logout' %}">Выход</a></b>
+    {% endblock %}
+</div>
