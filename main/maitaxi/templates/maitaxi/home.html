@@ -15,10 +15,10 @@
 <form method="post">
     {% csrf_token %}
 
-    <p><label for="{{ form.departure_point.id_for_label }}">{{form.departure_point.label}}: </label>{{ form.departure_point}}</p>
+    <p><label for="{{ form.departure_point.id_for_label }}">{{ form.departure_point.label }}: </label>{{ form.departure_point }}</p>
     <div>{{ form.departure_point.errors }}</div>
 
-    <p><label for="{{ form.arrival_point.id_for_label }}">{{form.arrival_point.label}}: </label>{{ form.arrival_point}}</p>
+    <p><label for="{{ form.arrival_point.id_for_label }}">{{ form.arrival_point.label }}: </label>{{ form.arrival_point }}</p>
     <div>{{ form.arrival_point.errors }}</div>
 
     <button type="submit" class="btn-btn-primary">Заказать</button>

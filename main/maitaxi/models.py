@@ -6,7 +6,7 @@ class Driver(models.Model):
     name = models.CharField(max_length=255)
     surname = models.CharField(max_length=255)
     experience = models.DecimalField(decimal_places=1, max_digits=3)
-    model_car = models.CharField(max_length=100)
+    car = models.CharField(max_length=100)
     car_id = models.CharField(max_length=6)
     rating = models.DecimalField(decimal_places=2, max_digits=3)
     col_review = models.IntegerField()
