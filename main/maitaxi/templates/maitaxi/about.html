@@ -1,16 +1,24 @@
 {% extends 'maitaxi/base.html' %}
 {% load static %}
-
 {% block content %}
-<h2>{{ title }}</h2>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/about.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<h2 class="about_h2">{{title}}</h2>
 <hr>
-<div>
-    Данный проект представляет собой создание web-приложения такси на основе Django
+<div class="about">
+    <p class="about_p">Данный проект представляет собой создание web-приложения такси на основе Django
     для backend и JavaScript, HTML, CSS для frontend разработки. В приложении пользователи
     смогут зарегистрироваться, заказывать такси, просматривать историю поездок и оценивать
     водителей. Комбинация функциональности на серверной и клиентской сторонах сделает приложение
     удобным и интуитивно понятным для пользователей, обеспечивая им полный контроль над заказами
-    такси и персональными настройками.
+    такси и персональными настройками.</p>
 </div>
-<p>Подробнее <b><a href="https://docs.google.com/document/d/1E9tAdZT7uYN8FoZY_C3oCNgzILmKtrdsNLc7biiwS-w/edit">Здесь</a></b></p>
+<p>Подробнее:</p>
+<b><a class="about_a" href="https://docs.google.com/document/d/1E9tAdZT7uYN8FoZY_C3oCNgzILmKtrdsNLc7biiwS-w/edit">Здесь</a></b>
 {% endblock %}

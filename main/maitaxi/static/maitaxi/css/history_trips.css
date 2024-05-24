@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: left;
+    height: 2000px;
+    width: 500px;
+}
+
+footer {
+    filter: opacity(0);
+}
+
+footer h2 {
+    font-size: 2.5em;
+}
+
+.history {
+    /* text-align: left; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.history_h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 40px;
+}

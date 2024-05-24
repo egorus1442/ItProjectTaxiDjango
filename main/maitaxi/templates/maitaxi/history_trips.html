@@ -1,17 +1,28 @@
 {% extends 'maitaxi/base.html' %}
 {% load static %}
 {% block content %}
-<h2>{{title}}</h2>
-<hr>
-{% for order in orders %}
-    <p><b>Откуда: </b>{{ order.departure_point }}</p>
-    <p><b>Куда: </b>{{ order.arrival_point }}</p>
-    <p><b>Водитель: </b>{{ order.driver.name }} {{ order.driver.surname }}</p>
-    <p><b>Стаж вождения: </b> {{ order.driver.experience }} лет, <b>Рейтинг:</b> {{ order.driver.rating }} звезд</p>
-    <p><b>Машина: </b>{{ order.driver.car }}</p>
-    <p><b>Номер: </b>{{ order.driver.car_id }}</p>
-    <p><b>Стоимость: </b> {{ order.price }} MAIcoins</p>
-    <p><b>Дата заказа: </b> {{ order.order_time }}</p>
-    <hr>
-{%endfor%}
-{% endblock %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/history_trips.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <h2 class="history_h2">{{title}}</h2>
+    <div class="history">
+    {% for order in orders %}
+        <p><b>Откуда:</b>{{order.departure_point}}</p>
+        <p><b>Куда:</b>{{order.arrival_point}}</p>
+        <p><b>Водитель:</b></p>
+        <p>{{order.driver.name}} {{order.driver.surname}}</p>
+        <p><b>Стаж вождения:</b> {{order.driver.experience}} лет, <b>Рейтинг:</b> {{order.driver.rating}} звезд</p>
+        <p><b>Машина:</b></p>
+        <p><b>Модель:</b> {{order.driver.model_car}}, <b>Номер:</b>{{order.driver.car_id}}</p>
+        <p><b>Стоимость:</b> {{order.price}} MAIcoins</p>
+        <p><b>Дата заказа:</b> {{order.order_time}}</p>
+    </div>
+    {%endfor%}
+    {% endblock %}
+</body>
