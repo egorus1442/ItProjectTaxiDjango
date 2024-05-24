@@ -15,8 +15,8 @@ body::before,
 body::after {
     content: '';
     width: 100%;
-    height: 50px;
-    background-color: blue;
+    height: 83px;
+    background-color: #0d6efd;
     position: absolute;
     left: 0;
 }
@@ -49,7 +49,7 @@ a {
     margin: 10px 0px;
     font-family: "Roboto", sans-serif;
     display: inline-block;
-    background: blue;
+    background: #0d6efd;
     font-size: 20px;
     border-radius: 10px;
     padding: 12px;
