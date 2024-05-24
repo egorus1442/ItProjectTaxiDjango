@@ -1,9 +1,16 @@
 {% extends 'maitaxi/base.html' %}
 {% load static %}
 {% block content %}
-<li>{{user.username}}</li>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/home.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<li class="polzovatel">Пользователь: {{user.username}}</li>
 <h2>{{title}}</h2>
-<hr>
 <h3>Заказать такси:</h3>
 <form method="post">
     {% csrf_token %}
@@ -14,6 +21,6 @@
     <p><label for="{{ form.arrival_point.id_for_label }}">{{form.arrival_point.label}}: </label>{{ form.arrival_point}}</p>
     <div>{{ form.arrival_point.errors }}</div>
 
-    <button type="submit" class="btn btn-primary">Заказать</button>
+    <button type="submit" class="btn-btn-primary">Заказать</button>
 </form>
 {% endblock %}

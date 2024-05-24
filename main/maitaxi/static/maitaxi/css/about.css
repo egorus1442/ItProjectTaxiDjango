@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer h2 {
+    font-size: 2.5em;
+}
+
+.about {
+    width: 300px;
+}
+
+.about_a {
+    text-decoration: none;
+}
+
+.about_p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.about_h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: 400;
+}
