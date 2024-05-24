@@ -224,7 +224,7 @@ Desktop.pub
 *.pyd
 
 # Django related
-/staticfiles/
+staticfiles/
 
 # OS related
 .DS_Store
