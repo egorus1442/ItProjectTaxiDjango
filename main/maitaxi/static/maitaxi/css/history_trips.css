@@ -3,10 +3,14 @@
     padding: 0;
 }
 
-body {
-    text-align: left;
-    height: 2000px;
+body.history {
+    height: auto;
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    margin-top: 10%;
 }
 
 footer {
@@ -20,6 +24,9 @@ footer h2 {
 .history {
     /* text-align: left; */
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .history_h2 {
@@ -27,4 +34,8 @@ footer h2 {
     font-size: 2.5em;
     font-weight: 400;
     margin-bottom: 40px;
+}
+
+.trip-info{
+    margin: 3%;
 }

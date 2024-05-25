@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path, include
-from maitaxi.views import e_handler404, e_handler500
 
 urlpatterns = [
     path(route='admin/', view=admin.site.urls),

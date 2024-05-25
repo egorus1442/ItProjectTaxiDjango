@@ -37,11 +37,6 @@ class LoginUser(LoginView):
         return reverse_lazy('home')
 
 
-# def home(request):
-#    context = {'title': 'Главная', 'menu': menu}
-#    return render(request, 'maitaxi/home.html', context=context)
-
-
 def home(request):
     if request.method == 'POST':
         form = TripForm(request.POST)
@@ -88,3 +83,15 @@ def e_handler404(request, exception):
 
 def e_handler500(request):
     return render(request=request, template_name='maitaxi/500.html', context={}, status=500)
+
+
+def edit_profile(request):
+    if request.method == 'POST':
+        form = ProfileEditForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')  # Перенаправить на страницу профиля после сохранения
+    else:
+        form = ProfileEditForm(instance=request.user)
+
+    return render(request, 'maitaxi/profile_edit.html', {'form': form, 'title': 'Редактирование профиля', 'menu': menu})
