@@ -94,4 +94,5 @@ def edit_profile(request):
     else:
         form = ProfileEditForm(instance=request.user)
 
-    return render(request, 'maitaxi/profile_edit.html', {'form': form, 'title': 'Редактирование профиля', 'menu': menu})
+    return render(request=request, template_name='maitaxi/profile_edit.html',
+                  context={'form': form, 'title': 'Редактирование профиля', 'menu': menu})
