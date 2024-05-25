@@ -229,3 +229,4 @@ staticfiles/
 # OS related
 .DS_Store
 *.swp
+../.idea/
