@@ -11,11 +11,13 @@
 </head>
 <h2>{{title}}</h2>
 <h2>Заказ создан</h2>
-<p><b>Откуда: </b>{{order.departure_point}}</p>
-<p><b>Куда: </b>{{order.arrival_point}}</p>
-<p><b>Водитель: </b> {{order.driver.name}} {{order.driver.surname}}</p>
-<p><b>Стаж вождения: </b> {{order.driver.experience}} лет, <b>Рейтинг:</b> {{order.driver.rating}} звезд</p>
-<p><b>Машина: </b> {{order.driver.car}}, <b>Номер:</b>{{order.driver.car_id}} </p>
-<p><b>Стоимость: </b> {{order.price}} MAIcoins</p>
-<p><b>Дата заказа: </b> {{order.order_time}}</p>
+<div class="info">
+    <p class="info_p"><b>Откуда: </b>{{order.departure_point}}</p>
+    <p class="info_p"><b>Куда: </b>{{order.arrival_point}}</p>
+    <p class="info_p"><b>Водитель: </b> {{order.driver.name}} {{order.driver.surname}}</p>
+    <p class="info_p"><b>Стаж вождения: </b> {{order.driver.experience}} лет, <b>Рейтинг:</b> {{order.driver.rating}} звезд</p>
+    <p class="info_p"><b>Машина: </b> {{order.driver.car}}, <b>Номер:</b>{{order.driver.car_id}} </p>
+    <p class="info_p"><b>Стоимость: </b> {{order.price}} MAIcoins</p>
+    <p class="info_p"><b>Дата заказа: </b> {{order.order_time}}</p>
+</div>
 {% endblock %}

@@ -39,13 +39,11 @@ h3 {
     transition: 0.5s;
 }
 
-p.log {
-    text-align: left;
+p.log:first-child {
     margin-top: 30px;
-    font-family: "Roboto", sans-serif;
 }
 
-p.poch {
+p.log {
     text-align: left;
     font-family: "Roboto", sans-serif;
 }

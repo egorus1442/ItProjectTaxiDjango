@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-body {
-    height: 2000px;
+body.history {
+    height: auto;
     width: 500px;
     display: flex;
     flex-direction: column;

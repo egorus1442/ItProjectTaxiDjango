@@ -29,12 +29,21 @@ body::after {
     bottom: 0;
 }
 
-h2 {
+p {
+    margin-bottom: -1rem;
+}
+
+.edits_b {
+    text-align: center;
+}
+
+h1 {
     color: #333;
     font-size: 2.5em;
-    margin: 0.5em 0;
+    margin: 0.2em 0;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
+    /* margin-bottom: 2.5em; */
 }
 
 h3 {
@@ -58,13 +67,13 @@ li {
     color: ghostwhite;
 }
 
-.polzovatel {
+/* .polzovatel {
     background: #0d6efd;
     color: ghostwhite;
     border-radius: 20px;
     padding: 10px;
     margin-left: auto;
-}
+} */
 
 hr {
     width: 100%;
@@ -95,12 +104,13 @@ form input {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-btn-primary {
     width: 300px;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-bottom: 10px;
     background: #0d6efd;
     color: ghostwhite;
@@ -120,3 +130,31 @@ form input {
     transform: scale(1.05);
     box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
+}
+
+.edits_a {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin-top: -1rem;
+    margin-bottom: 10px;
+    background: #0d6efd;
+    color: ghostwhite;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+}
+
+.edits_a:hover {
+    background: ghostwhite;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
