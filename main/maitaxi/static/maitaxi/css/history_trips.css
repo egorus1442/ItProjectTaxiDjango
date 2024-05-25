@@ -3,13 +3,8 @@
     padding: 0;
 }
 
-<<<<<<< HEAD
 body.history {
     height: auto;
-=======
-body {
-    height: 2000px;
->>>>>>> 6df0bbfb25bb29e49518412a6a466b7039d193d1
     width: 500px;
     display: flex;
     flex-direction: column;

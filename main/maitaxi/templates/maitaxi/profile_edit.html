@@ -1,7 +1,6 @@
 {% extends 'maitaxi/base.html' %}
 {% load static %}
 {% block content %}
-<<<<<<< HEAD
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'maitaxi/css/profile_edit.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,14 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-=======
->>>>>>> 6df0bbfb25bb29e49518412a6a466b7039d193d1
     <h1>Редактировать профиль</h1>
     <form method="post">
         {% csrf_token %}
 
         <p><label for="{{ form.username.id_for_label }}">{{ form.username.label }}: </label>{{ form.username }}</p>
-<<<<<<< HEAD
         <div>{{ form.username.errors }}</div>
 
         <p><label for="{{ form.email.id_for_label }}">{{ form.email.label }}: </label>{{ form.email }}</p>
@@ -32,22 +28,6 @@
         <button type="submit" class="btn-btn-primary">Сохранить</button>
     </form>
     <b class="edits_b"><a class="edits_a" href="{% url 'profile' %}">Назад</a></b>
-=======
-    <div>{{ form.username.errors }}</div>
-
-    <p><label for="{{ form.email.id_for_label }}">{{ form.email.label }}: </label>{{ form.email }}</p>
-    <div>{{ form.email.errors }}</div>
-
-        <p><label for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}: </label>{{ form.first_name }}</p>
-    <div>{{ form.first_name.errors }}</div>
-
-    <p><label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}: </label>{{ form.last_name }}</p>
-    <div>{{ form.last_name.errors }}</div>
-
-        <button type="submit" class="btn-btn-primary">Save changes</button>
-    </form>
-     <b><a class="profile_a" href="{% url 'profile' %}">Назад</a></b>
->>>>>>> 6df0bbfb25bb29e49518412a6a466b7039d193d1
 </body>
 </html>
 {% endblock %}

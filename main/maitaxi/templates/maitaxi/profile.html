@@ -14,15 +14,9 @@
 <div class="profile">
     <h3>Информация о пользователе:</h3>
     <p class="log"><b>Логин:</b> {{user.username}}</p>
-<<<<<<< HEAD
     <p class="log"><b>Почта:</b> {{user.email}}</p>
     <p class="log"><b>Имя: </b> {{ user.first_name }}</p>
     <p class="log"><b>Фамилия: </b> {{ user.last_name }}</p>
-=======
-    <p class="poch"><b>Почта:</b> {{user.email}}</p>
-     <p><b>Имя: </b> {{ user.first_name }}</p>
-    <p><b>Фамилия: </b> {{ user.last_name }}</p>
->>>>>>> 6df0bbfb25bb29e49518412a6a466b7039d193d1
     <b><a class="profile_a" href="{% url 'logout' %}">Выход</a></b>
     <b><a class="profile_a" href="{% url 'edit_profile' %}">Редактировать профиль</a></b>
     {% endblock %}
