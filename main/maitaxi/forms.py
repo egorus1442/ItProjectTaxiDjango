@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
 from django.contrib.auth.models import User
 from .models import Trip
 
@@ -30,3 +30,11 @@ class TripForm(forms.ModelForm):
         labels = {'departure_point': 'Начальный адрес',
                   'arrival_point': 'Конечный адрес',
                   }
+
+
+class ProfileEditForm(UserChangeForm):
+    password = None  # Исключаем поле пароля из формы
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'first_name', 'last_name']

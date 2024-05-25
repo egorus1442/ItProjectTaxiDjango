@@ -1,0 +1,25 @@
+{% extends 'maitaxi/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Редактировать профиль</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <p><label for="{{ form.username.id_for_label }}">{{ form.username.label }}: </label>{{ form.username }}</p>
+    <div>{{ form.username.errors }}</div>
+
+    <p><label for="{{ form.email.id_for_label }}">{{ form.email.label }}: </label>{{ form.email }}</p>
+    <div>{{ form.email.errors }}</div>
+
+        <p><label for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}: </label>{{ form.first_name }}</p>
+    <div>{{ form.first_name.errors }}</div>
+
+    <p><label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}: </label>{{ form.last_name }}</p>
+    <div>{{ form.last_name.errors }}</div>
+
+        <button type="submit" class="btn-btn-primary">Save changes</button>
+    </form>
+     <b><a class="profile_a" href="{% url 'profile' %}">Назад</a></b>
+</body>
+</html>
+{% endblock %}

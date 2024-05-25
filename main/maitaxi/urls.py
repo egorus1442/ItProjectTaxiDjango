@@ -11,4 +11,5 @@ urlpatterns = [
     path(route='history_trips/', view=history_trips, name='history_trips'),
     path(route='profile/', view=profile, name='profile'),
     path(route='info_order/', view=info_order, name='info_order'),
+    path(route='edit-profile/', view=edit_profile, name='edit_profile'),
 ]
